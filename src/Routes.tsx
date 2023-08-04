@@ -27,8 +27,7 @@ export default function Routes() {
         {
             path: '/relatorios',
             element: <Relatorios />,
-        }
-
+        },
         {
             path: "/panel",
             element: <Panel />,

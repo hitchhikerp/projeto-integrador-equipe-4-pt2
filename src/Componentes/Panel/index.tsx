@@ -1,3 +1,4 @@
+import Button from "../Button";
 import { PainelStyled, Info, TableRow } from "./style";
 
 function createData(
@@ -42,6 +43,8 @@ export default function Painel() {
                                     <td align="right">{row.service}</td>
                                     <td align="right">{row.date}</td>
                                     <td align="right">{row.status}</td>
+                                    <td> <Button text="ver detalhes"/> </td>
+                                    <td> <Button text="atender solicitação"/></td>
                                 </tr>
                             </tbody>
                         ))}
