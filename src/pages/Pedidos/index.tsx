@@ -1,13 +1,19 @@
-import Header from "../../Componentes/Header";
-import Titulos from "../../Componentes/Titulos";
 import Footer from "../../Componentes/Footer";
+import Header from "../../Componentes/Header";
+import Panel from "../../Componentes/Panel";
+import Titulos from "../../Componentes/Titulos";
 
-export default function Servicos() {
+
+export default function Pedidos() {
     return (
         <>
-        <Header />
-        <Titulos  />
-        <Footer />
+            <Header />
+            <Titulos
+                titulo="Painel de Controle"
+                descricao="Área exclusiva para funcionários."
+            />
+            <Panel />
+            <Footer />
         </>
-    )
+    );
 }

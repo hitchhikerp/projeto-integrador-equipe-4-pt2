@@ -1,4 +1,4 @@
-import { PainelStyled, Info, TableRow } from "./style";
+import { PainelStyled, Info } from "./style";
 
 function createData(
     cod: number,

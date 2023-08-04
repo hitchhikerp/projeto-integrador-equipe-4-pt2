@@ -14,7 +14,7 @@ export default function Header() {
           <Menu>
             <ul>
               <li>
-                <Link to="/pedidos">Início</Link>
+                <Link to="/painel">Início</Link>
               </li>
               <li>
                 <Link to="/servicos">Serviços</Link>
