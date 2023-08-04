@@ -1,4 +1,5 @@
 import Button from "../Button";
+import { Link } from "react-router-dom"
 import { PainelStyled, Info } from "./style";
 
 function createData(
@@ -43,7 +44,7 @@ export default function Painel() {
                                     <td align="right">{row.service}</td>
                                     <td align="right">{row.date}</td>
                                     <td align="right">{row.status}</td>
-                                    <td> <Button text="ver detalhes"/> </td>
+                                    <td> <Link to="/detalhes"><Button text="ver detalhes"/></Link> </td>
                                     <td> <Button text="atender solicitação"/></td>
                                 </tr>
                             </tbody>
