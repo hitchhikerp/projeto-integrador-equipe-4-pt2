@@ -1,9 +1,9 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/Login";
 import Pedidos from "./pages/Pedidos";
 import Detalhes from "./pages/Detalhes";
 import Servicos from "./pages/Servicos";
 import Relatorios from "./pages/Relatorios";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 export default function Routes() {
     const routes = createBrowserRouter([
@@ -16,7 +16,7 @@ export default function Routes() {
             element: <Detalhes />,
         },
         {
-          path: "/panel",
+          path: "/painel",
           element: <Pedidos />,
         },
         {

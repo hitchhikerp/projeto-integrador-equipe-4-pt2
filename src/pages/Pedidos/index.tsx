@@ -1,6 +1,6 @@
 import Footer from "../../Componentes/Footer";
 import Header from "../../Componentes/Header";
-import Panel from "../../Componentes/Panel";
+import Painel from "../../Componentes/Painel";
 import Titulos from "../../Componentes/Titulos";
 
 
@@ -12,7 +12,7 @@ export default function Pedidos() {
                 titulo="Painel de Controle"
                 descricao="Área exclusiva para funcionários."
             />
-            <Panel />
+            <Painel />
             <Footer />
         </>
     );

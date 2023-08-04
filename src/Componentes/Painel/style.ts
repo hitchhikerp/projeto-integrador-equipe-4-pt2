@@ -40,7 +40,4 @@ thead{
   border: 1px solid black;
   
 }
-
 `;
-
-export const TableRow = styled.nav``
