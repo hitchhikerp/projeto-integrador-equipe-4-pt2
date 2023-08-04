@@ -7,7 +7,7 @@ export default function Login() {
     return (
         <>
         <Header />
-        <Titulos  />
+        <Titulos descricao='Para acessar a área do funcionário entre com suas informações de acesso'/>
         <Formualario />
         <Footer />
         </>

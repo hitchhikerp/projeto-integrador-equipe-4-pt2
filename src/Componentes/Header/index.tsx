@@ -1,4 +1,5 @@
 import Foguete from "../../assets/foguete.png";
+import { Link } from "react-router-dom"
 import { Container, H3Styled, Div, HeaderStyled, ImgStyled, Menu } from "./style";
 
 export default function Header() {
@@ -13,13 +14,13 @@ export default function Header() {
           <Menu>
             <ul>
               <li>
-                <a href="#">Ínicio</a>
+                <Link to="/pedidos">Início</Link>
               </li>
               <li>
-                <a href="#">Serviços</a>
+                <Link to="/servicos">Serviços</Link>
               </li>
               <li>
-                <a href="#">Relátorios</a>
+                <Link to="/relatorios">Relátorios</Link>
               </li>
             </ul>
           </Menu>
