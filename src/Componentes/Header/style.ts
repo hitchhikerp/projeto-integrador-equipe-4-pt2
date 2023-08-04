@@ -24,7 +24,7 @@ export const H3Styled = styled.h3`
 `;
 
 export const Container = styled.div`
-    width: 1200px;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
     display: flex;
