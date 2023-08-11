@@ -8,6 +8,6 @@ export const Field = styled.form`
 
   input {
     margin: 5px 0 15px;
-    padding: 7px;
+    padding: 8px;
   }
 `;
