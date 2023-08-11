@@ -2,16 +2,22 @@ import Foguete from "../../assets/foguete.png";
 import { Link } from "react-router-dom"
 import { Container, H3Styled, Div, HeaderStyled, ImgStyled, Menu } from "./style";
 
-export default function Header() {
+interface MenuProps {
+  visible?: boolean
+}
+
+export default function Header({
+  visible = true
+}: MenuProps) {
   return (
     <>
       <HeaderStyled>
-        <Container>
+        <Container> 
           <Div>
             <ImgStyled src={Foguete} alt=""></ImgStyled>
             <H3Styled>Velocity</H3Styled>
           </Div>
-          <Menu>
+          { visible && <Menu>
             <ul>
               <li>
                 <Link to="/painel">Início</Link>
@@ -23,7 +29,7 @@ export default function Header() {
                 <Link to="/relatorios">Relátorios</Link>
               </li>
             </ul>
-          </Menu>
+          </Menu>}
         </Container>
       </HeaderStyled>
     </>

@@ -1,5 +1,5 @@
 import Login from "./pages/Login";
-import Pedidos from "./pages/Pedidos";
+import Painel from "./pages/Painel";
 import Detalhes from "./pages/Detalhes";
 import Servicos from "./pages/Servicos";
 import Relatorios from "./pages/Relatorios";
@@ -12,12 +12,12 @@ export default function Routes() {
             element: <Login />,
         },
         {
-            path: '/detalhes',
-            element: <Detalhes />,
+            path: '/painel',
+            element: <Painel />,
         },
         {
-          path: "/painel",
-          element: <Pedidos />,
+            path: '/detalhes',
+            element: <Detalhes />,
         },
         {
             path: '/servicos',
@@ -27,8 +27,6 @@ export default function Routes() {
             path: '/relatorios',
             element: <Relatorios />,
         },
-
-
 
     ])
     return <RouterProvider router={routes} />;

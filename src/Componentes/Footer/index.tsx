@@ -9,7 +9,6 @@ import {
   ImgStyled,
   PStyled,
   LiStyled,
-  UlStyled,
 } from "../Footer/style";
 
 export default function Footer() {
@@ -22,12 +21,12 @@ export default function Footer() {
               <ImgStyled src={Foguete} alt=""></ImgStyled>
               <H3Styled>Velocity</H3Styled>
             </DivSecundaria>
-            <UlStyled>
+            <ul>
               <LiStyled>Canais de comunicação:</LiStyled>
               <LiStyled>Whataspp</LiStyled>
               <LiStyled>E-mail</LiStyled>
               <LiStyled>Telefone</LiStyled>
-            </UlStyled>
+            </ul>
           </DivPrincipal>
           <hr></hr>
           <PStyled>

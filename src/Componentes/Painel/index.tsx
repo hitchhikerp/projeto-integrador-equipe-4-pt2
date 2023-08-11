@@ -1,7 +1,7 @@
 import Button from "../Button2";
 import Button2 from "../Button2";
 import { Link } from "react-router-dom"
-import { PainelStyled, Info, Div} from "./style";
+import { PainelStyled, Info, Div } from "./style";
 
 function createData(
     cod: number,
@@ -14,11 +14,11 @@ function createData(
 }
 
 const rows = [
-    createData(12312321, 'Renato', 'Plano Familia', '04/08/2023', 'Em Andamento'),
-    createData(12312321, 'Renato', 'Plano Familia', '04/08/2023', 'Em Andamento'),
-    createData(12312321, 'Renato', 'Plano Familia', '04/08/2023', 'Em Andamento'),
-    createData(12312321, 'Renato', 'Plano Familia', '04/08/2023', 'Em Andamento'),
-    createData(12312321, 'Renato', 'Plano Familia', '04/08/2023', 'Em Andamento'),
+    createData(124, 'Renato', 'Plano Familia - Instalação', '04/08/2023', 'Aguardando agendamento'),
+    createData(124, 'Renato', 'Plano Familia - Instalação', '04/08/2023', 'Aguardando agendamento'),
+    createData(124, 'Renato', 'Plano Familia - Instalação', '04/08/2023', 'Aguardando agendamento'),
+    createData(124, 'Renato', 'Plano Familia - Instalação', '04/08/2023', 'Aguardando agendamento'),
+    createData(124, 'Renato', 'Plano Familia - Instalação', '04/08/2023', 'Aguardando agendamento'),
 ];
 
 export default function Painel() {
@@ -34,6 +34,8 @@ export default function Painel() {
                                 <th>Serviço solicitado</th>
                                 <th>Data da contratação</th>
                                 <th>Status</th>
+                                <th>Detalhes</th>
+                                <th>Atribuir</th>
                             </tr>
                         </thead>
 

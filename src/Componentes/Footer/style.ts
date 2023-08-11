@@ -11,7 +11,7 @@ export const FooterStyled = styled.footer`
 
 export const Container = styled.div`
     max-width: 100%;
-    height: 100%;
+    height: 222px;
 `;
 
 export const ImgStyled = styled.img`
@@ -39,11 +39,6 @@ export const H3Styled = styled.h3`
 
 export const PStyled = styled.p`
     text-align: center;
-`;
-
-
-export const UlStyled = styled.ul`
-    
 `;
 
 export const LiStyled = styled.li`

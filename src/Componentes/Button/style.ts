@@ -9,4 +9,8 @@ export const ButtonStyled = styled.button`
   border-radius: 5px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+
+  &:hover {
+    background-color: red;
+  }
 `;
