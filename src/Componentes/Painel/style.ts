@@ -1,16 +1,22 @@
 import styled from "styled-components"
 
 export const PainelStyled = styled.main`
-  width: 100%;
-  height: 100%;
+  width: 0 auto;
+  height: 0 auto;
   margin: 18px;
+  
 `;
 
 export const Info = styled.section`
-  width: 95%;
+  width: auto;
   background-color: #fff;
   border: 1px solid #b4b4b4;
   border-radius: 15px;
+  padding: 30px;
+  margin: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
 
 td, th {
   padding: 8px;
@@ -33,5 +39,18 @@ thead{
 
 button {
   cursor: pointer;
-}
+  }
 `;
+
+export const Div = styled.div`
+
+button{
+  width: auto;
+  background-color: white;
+  color: green;
+  padding: 8px 18px;
+  margin: 15px 0 0;
+  border: 2px solid green;
+  border-radius: 10px;
+}
+`

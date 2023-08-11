@@ -26,7 +26,10 @@ export default function Routes() {
         {
             path: '/relatorios',
             element: <Relatorios />,
-        }
+        },
+
+
+
     ])
     return <RouterProvider router={routes} />;
 }

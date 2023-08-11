@@ -1,6 +1,7 @@
-import Button from "../Button";
+import Button from "../Button2";
+import Button2 from "../Button2";
 import { Link } from "react-router-dom"
-import { PainelStyled, Info } from "./style";
+import { PainelStyled, Info, Div} from "./style";
 
 function createData(
     cod: number,
@@ -29,23 +30,26 @@ export default function Painel() {
                         <thead>
                             <tr>
                                 <th>Codigo Pedido</th>
-                                <th align="right">Nome do Cliente</th>
-                                <th align="right">Serviço solicitado</th>
-                                <th align="right">Data da contratação</th>
-                                <th align="right">Status</th>
+                                <th>Nome do Cliente</th>
+                                <th>Serviço solicitado</th>
+                                <th>Data da contratação</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
 
                         {rows.map((row) => (
                             <tbody key={row.cod} >
                                 <tr>
-                                    <td align="right">{row.cod}</td>
-                                    <td align="right">{row.name}</td>
-                                    <td align="right">{row.service}</td>
-                                    <td align="right">{row.date}</td>
-                                    <td align="right">{row.status}</td>
-                                    <td> <Link to="/detalhes"><Button text="ver detalhes"/></Link> </td>
-                                    <td> <Button text="atender solicitação"/></td>
+                                    <td>{row.cod}</td>
+                                    <td>{row.name}</td>
+                                    <td>{row.service}</td>
+                                    <td>{row.date}</td>
+                                    <td>{row.status}</td>
+                                    <td> <Link to="/detalhes"><Button2 text="ver detalhes"/></Link> </td>
+
+                                    <Div>
+                                    <td><Button text="atender solicitação"/></td>
+                                    </Div>
                                 </tr>
                             </tbody>
                         ))}

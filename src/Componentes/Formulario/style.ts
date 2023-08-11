@@ -9,7 +9,11 @@ export const Form = styled.form`
   border-radius: 15px;
 
   input {
+    height: 30px;
+    border-radius: 5px solid 1px;
     width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
 `;
 
