@@ -1,36 +1,33 @@
-import Foguete from "../../assets/foguete.png";
-import { Link } from "react-router-dom"
-import { Container, H3Styled, Div, HeaderStyled, ImgStyled, Menu } from "./style";
+import Foguete from "../../assets/Velocity-logo.png";
+import { Link } from "react-router-dom";
+import { HeaderStyled, Menu } from "./style";
 
 interface MenuProps {
-  visible?: boolean
+  visible?: boolean;
 }
 
-export default function Header({
-  visible = true
-}: MenuProps) {
+export default function Header({ visible = true }: MenuProps) {
   return (
     <>
       <HeaderStyled>
-        <Container> 
-          <Div>
-            <ImgStyled src={Foguete} alt=""></ImgStyled>
-            <H3Styled>Velocity</H3Styled>
-          </Div>
-          { visible && <Menu>
-            <ul>
-              <li>
-                <Link to="/painel">Início</Link>
-              </li>
-              <li>
-                <Link to="/servicos">Serviços</Link>
-              </li>
-              <li>
-                <Link to="/relatorios">Relátorios</Link>
-              </li>
-            </ul>
-          </Menu>}
-        </Container>
+        <div>
+          <img src={Foguete} alt=""></img>
+          {visible && (
+            <Menu>
+              <ul>
+                <li>
+                  <Link to="/painel">Início</Link>
+                </li>
+                <li>
+                  <Link to="/servicos">Serviços</Link>
+                </li>
+                <li>
+                  <Link to="/relatorios">Relátorios</Link>
+                </li>
+              </ul>
+            </Menu>
+          )}
+        </div>
       </HeaderStyled>
     </>
   );

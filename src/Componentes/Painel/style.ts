@@ -9,7 +9,6 @@ export const PainelStyled = styled.main`
 export const Info = styled.section`
   width: auto;
   background-color: #fff;
-  border: 1px solid #b4b4b4;
   border-radius: 15px;
   padding: 30px;
   margin: 50px;
@@ -22,7 +21,7 @@ tr {
 td, th {
   padding: 10px;
   text-align: center;
-  border-bottom: 1px solid #b4b4b4;
+  border-bottom: 1.6px solid #b4b4b4;
 }
 
 td{

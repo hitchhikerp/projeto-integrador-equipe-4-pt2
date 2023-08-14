@@ -15,8 +15,9 @@ export const Container = styled.div`
 `;
 
 export const ImgStyled = styled.img`
-    width: 65px;
-    height: 65px;
+    width: 265px;
+    height: 100px;
+    margin: 5px;
 `;
 
 export const DivPrincipal = styled.div`

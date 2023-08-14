@@ -1,11 +1,9 @@
-import Foguete from "../../assets/foguete.png";
+import Foguete from "../../assets/Velocity-logo.png";
 
 import {
   Container,
-  DivSecundaria,
   DivPrincipal,
   FooterStyled,
-  H3Styled,
   ImgStyled,
   PStyled,
   LiStyled,
@@ -17,15 +15,12 @@ export default function Footer() {
       <FooterStyled>
         <Container>
           <DivPrincipal>
-            <DivSecundaria>
               <ImgStyled src={Foguete} alt=""></ImgStyled>
-              <H3Styled>Velocity</H3Styled>
-            </DivSecundaria>
             <ul>
               <LiStyled>Canais de comunicação:</LiStyled>
-              <LiStyled>Whataspp</LiStyled>
-              <LiStyled>E-mail</LiStyled>
-              <LiStyled>Telefone</LiStyled>
+              <LiStyled>Whatsapp:</LiStyled>
+              <LiStyled>E-mail:</LiStyled>
+              <LiStyled>Telefone:</LiStyled>
             </ul>
           </DivPrincipal>
           <hr></hr>

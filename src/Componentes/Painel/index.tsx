@@ -14,11 +14,11 @@ function createData(
 }
 
 const rows = [
-    createData(124, 'Renato', 'Plano Familia - Instalação', '04/08/2023', 'Aguardando agendamento'),
-    createData(124, 'Renato', 'Plano Familia - Instalação', '04/08/2023', 'Aguardando agendamento'),
-    createData(124, 'Renato', 'Plano Familia - Instalação', '04/08/2023', 'Aguardando agendamento'),
-    createData(124, 'Renato', 'Plano Familia - Instalação', '04/08/2023', 'Aguardando agendamento'),
-    createData(124, 'Renato', 'Plano Familia - Instalação', '04/08/2023', 'Aguardando agendamento'),
+    createData(124, 'Renato', 'Plano Família - Instalação', '04/08/2023', 'Aguardando agendamento'),
+    createData(124, 'Renato', 'Plano Família - Instalação', '04/08/2023', 'Aguardando agendamento'),
+    createData(124, 'Renato', 'Plano Família - Instalação', '04/08/2023', 'Aguardando agendamento'),
+    createData(124, 'Renato', 'Plano Família - Instalação', '04/08/2023', 'Aguardando agendamento'),
+    createData(124, 'Renato', 'Plano Família - Instalação', '04/08/2023', 'Aguardando agendamento'),
 ];
 
 export default function Painel() {
