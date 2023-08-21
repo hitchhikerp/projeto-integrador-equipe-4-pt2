@@ -8,7 +8,7 @@ export default function Servicos() {
         <>
         <Header />
         <Titulos  />
-        < Painel />
+        <Painel />
         <Footer />
         </>
     )

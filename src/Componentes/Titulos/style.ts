@@ -7,6 +7,6 @@ export const H1Styled = styled.h1`
 `
 
 export const Container = styled.div`
-    margin: 28px;
+    margin: 12px 30px;
     padding: 10px;
 `

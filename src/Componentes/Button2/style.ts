@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonStyled = styled.button`
-background-color: white;
+background-color: #ffffff;
 color: #556ff5;
 padding: 8px 18px;
 margin: 15px 0 0;
@@ -9,4 +9,11 @@ border: 2px solid #556ff5;
 border-radius: 10px;
 font-family: "Raleway", sans-serif;
 font-weight: 700;
+
+&:hover {
+    transition: 300ms;
+    color: #202A5C;
+    border-color: #4054B8;
+    background-color: #bdbdbb;
+  }
 `;
