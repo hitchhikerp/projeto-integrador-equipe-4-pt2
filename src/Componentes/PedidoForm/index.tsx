@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import Button from "../Button";
-import Button2 from "../Button2";
 import { Form, Container, Div } from "./style";
+import ButtonModal from "../ButtonModal";
 
 interface InputProps {
-  name: string;
+  name?: string;
   service: string;
   date: string;
   hour: string;
-  status: string;
+  status?: string;
 }
 
 export default function PedidoForm({
@@ -41,7 +41,7 @@ export default function PedidoForm({
             <Button text="voltar" />
           </Link>
           <Div>
-            <Button2 text="atender solicitação" />
+            <ButtonModal text="atender solicitação" />
           </Div>
         </Form>
       </Container>

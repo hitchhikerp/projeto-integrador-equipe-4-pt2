@@ -4,6 +4,7 @@ interface ButtonProps {
   text: string;
 }
 
-export default function Button({ text }: ButtonProps) {
-  return <ButtonStyled>{text}</ButtonStyled>;
+export default function Button(
+  { text }: ButtonProps) {
+  return <ButtonStyled onClick={() => console.log('Clicou')}>{text}</ButtonStyled>;
 }
