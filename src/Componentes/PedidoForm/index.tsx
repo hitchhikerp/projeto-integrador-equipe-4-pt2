@@ -5,9 +5,9 @@ import ButtonModal from "../ButtonModal";
 
 interface InputProps {
   name?: string;
-  service: string;
-  date: string;
-  hour: string;
+  service?: string;
+  date?: string;
+  hour?: string;
   status?: string;
 }
 
