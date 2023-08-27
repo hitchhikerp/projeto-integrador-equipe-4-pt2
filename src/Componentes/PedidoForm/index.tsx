@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button";
 import { Form, Container, Div } from "./style";
 import ButtonModal from "../ButtonModal";
+import { FormEventHandler } from "react";
 
 interface InputProps {
   name?: string;
@@ -9,6 +10,11 @@ interface InputProps {
   date?: string;
   hour?: string;
   status?: string;
+}
+
+const logar: FormEventHandler<HTMLFormElement> = (evento) => {
+  // evita recarregamento da pagina no envio do formulario
+  evento.preventDefault();
 }
 
 export default function PedidoForm({
@@ -21,7 +27,7 @@ export default function PedidoForm({
   return (
     <>
       <Container>
-        <Form>
+        <Form onSubmit={logar}>
           <label>Nome</label>
           <input type="name" disabled value={name} />
 
@@ -41,7 +47,7 @@ export default function PedidoForm({
             <Button text="voltar" />
           </Link>
           <Div>
-            <ButtonModal text="atender solicitação" />
+          <ButtonModal text="atender solicitação" />
           </Div>
         </Form>
       </Container>

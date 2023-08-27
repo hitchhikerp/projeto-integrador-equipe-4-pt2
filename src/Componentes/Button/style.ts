@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
-export const ButtonStyled = styled.button`
-  background-color: #556ff5;
-  color: #ffffff;
-  padding: 12px 146px;
-  margin: 15px 0 0;
-  border: none;
-  border-radius: 5px;
+export const ButtonStyled = styled.button<{
+  backgroundColor?: string;
+  color?: string;
+  border?: string;
+}>`
+  background-color: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : "#556ff5"};
+  color: ${(props) => (props.color ? props.color : "#ffffff")};
+  padding: 12px 142px;
+  margin: 15px 0;
+  border: ${(props) => (props.border ? props.border : "2px solid #556ff5")};
+  border-radius: 8px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 

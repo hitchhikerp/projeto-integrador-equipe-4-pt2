@@ -8,7 +8,6 @@ interface ButtonProps {
 
 function ButtonModal({ text }: ButtonProps) {
   const [open, setOpen] = useState<boolean>(false);
-
   return (
     <>
       <ButtonStyled onClick={() => setOpen(!open)}>{text}</ButtonStyled>{" "}

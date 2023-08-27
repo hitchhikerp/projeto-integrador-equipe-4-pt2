@@ -35,7 +35,7 @@ export default function Formulario() {
             onChange={(e) => setSenha(e.target.value)}
           />
 
-          <Link to='/painel'><Button text="entrar" /></Link>
+          <Link to='/painel'><Button backgroundColor='red' text="entrar" /></Link>
         </Form>
       </Container>
     </>

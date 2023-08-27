@@ -1,10 +1,11 @@
 import { ButtonStyled } from "./style";
 
 interface ButtonProps {
-  text: string;
+  text?: string;
+  backgroundColor?: string;
 }
 
 export default function Button(
   { text }: ButtonProps) {
-  return <ButtonStyled onClick={() => console.log('Clicou')}>{text}</ButtonStyled>;
+  return <ButtonStyled>{text}</ButtonStyled>;
 }
