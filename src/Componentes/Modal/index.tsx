@@ -8,14 +8,21 @@ interface IModal {
   description: string;
 }
 
-export default function Modal({ isOpen, setOpen, title, description }: IModal) {
+export default function Modal({
+  isOpen,
+  setOpen,
+  title = "Atendimento atribuído com sucesso!",
+  description = "A solicitação selecionada foi atríbuida ao seu usuário",
+}: IModal) {
   if (isOpen) {
     return (
       <Container>
         <StyledModal>
-          <h2>{"Atendimento atribuído com sucesso!"}</h2>
-          <p>{"A solicitação selecionada foi atríbuida ao seu usuário"}</p>
-          <ButtonStyled basicSize onClick={() => setOpen(!isOpen)}>Fechar</ButtonStyled>
+          <h2>{title}</h2>
+          <p>{description}</p>
+          <ButtonStyled basicSize onClick={() => setOpen(!isOpen)}>
+            Fechar
+          </ButtonStyled>
         </StyledModal>
       </Container>
     );
