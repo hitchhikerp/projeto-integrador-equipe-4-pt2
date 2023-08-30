@@ -1,7 +1,7 @@
 import Footer from "../../Componentes/Footer";
 import Header from "../../Componentes/Header";
-import Titulos from "../../Componentes/Titulos";
-import Formulario from "../../Componentes/Formulario";
+import Titulos from "../../Componentes/TituloSubtitulo";
+import Formulario from "../../Componentes/FormularioLogin";
 
 export default function Login() {
     return (

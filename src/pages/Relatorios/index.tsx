@@ -1,5 +1,5 @@
 import Header from "../../Componentes/Header";
-import Titulos from "../../Componentes/Titulos";
+import Titulos from "../../Componentes/TituloSubtitulo";
 import Footer from "../../Componentes/Footer";
 import Grafico from "../../Componentes/Grafico";
 import { render } from 'react-dom'

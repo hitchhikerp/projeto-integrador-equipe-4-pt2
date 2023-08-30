@@ -1,7 +1,7 @@
 import Header from "../../Componentes/Header";
-import Titulos from "../../Componentes/Titulos";
+import Titulos from "../../Componentes/TituloSubtitulo";
 import Footer from "../../Componentes/Footer";
-import PedidoForm from "../../Componentes/PedidoForm";
+import PedidoForm from "../../Componentes/FormDetalhes";
 
 export default function Detalhes() {
   return (

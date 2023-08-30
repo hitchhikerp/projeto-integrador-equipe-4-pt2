@@ -11,12 +11,19 @@ export const Container = styled.div`
 
 export const StyledModal = styled.div`
   position: fixed;
-  top: 50%;
-  right: 50%;
+  top: 50vh;
+  right: 50vh;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   color: #000000;
   border-radius: 10px;
-  height: 300px;
-  width: 300px;
+  height: 280px;
+  width: 350px;
+  display: grid;
+  padding: 25px;
+
+  h2, p {
+    text-align: center;
+    margin: 15px;
+  }
 `;

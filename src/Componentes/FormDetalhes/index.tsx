@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import Button from "../Button";
-import { Form, Container, Div } from "./style";
-import ButtonModal from "../ButtonModal";
+import { Form, Container } from "./style";
 import { FormEventHandler } from "react";
+import { WrapperStyled } from "../Wrapper/style";
 
 interface InputProps {
   name?: string;
@@ -43,12 +43,14 @@ export default function PedidoForm({
           <label>Status</label>
           <input type="status" disabled value={status} />
 
+          <WrapperStyled>
           <Link to="/painel">
-            <Button text="voltar" />
+            <Button basicSize text="voltar" />
           </Link>
-          <Div>
-          <ButtonModal text="atender solicitação" />
-          </Div>
+          <div>
+          <Button basicGreen working={true} text="atender solicitação" />
+          </div>
+          </WrapperStyled>
         </Form>
       </Container>
     </>

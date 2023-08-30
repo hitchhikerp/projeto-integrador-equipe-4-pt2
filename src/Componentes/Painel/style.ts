@@ -33,20 +33,4 @@ table{
   text-align: center;
   border-collapse: collapse;
 }
-
-button {
-  cursor: pointer;
-}
 `;
-
-export const Div = styled.div`
-button{
-  width: auto;
-  background-color: white;
-  color: green;
-  padding: 8px 18px;
-  margin: 15px 0 0;
-  border: 2px solid green;
-  border-radius: 10px;
-}
-`

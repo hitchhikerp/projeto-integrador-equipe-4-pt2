@@ -1,10 +1,11 @@
+import { ButtonStyled } from "../Button/style";
 import { Container, StyledModal } from "./style";
 
 interface IModal {
   isOpen?: boolean;
   setOpen: (isOpen: boolean) => void;
   title: string;
-  description: string
+  description: string;
 }
 
 export default function Modal({ isOpen, setOpen, title, description }: IModal) {
@@ -12,9 +13,9 @@ export default function Modal({ isOpen, setOpen, title, description }: IModal) {
     return (
       <Container>
         <StyledModal>
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <button onClick={() => setOpen(!isOpen)}>Fechar</button>
+          <h2>{"Atendimento atribuído com sucesso!"}</h2>
+          <p>{"A solicitação selecionada foi atríbuida ao seu usuário"}</p>
+          <ButtonStyled basicSize onClick={() => setOpen(!isOpen)}>Fechar</ButtonStyled>
         </StyledModal>
       </Container>
     );

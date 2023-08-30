@@ -1,12 +1,12 @@
 import Routes from "./Routes"
-import { GlobalStyle } from "./geral"
+import { GlobalStyle } from "./GlobalStyle"
 
 function App() {
 
   return (
     <>
     <GlobalStyle/>
-    < Routes />
+    <Routes/>
     </>
   )
 }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Form = styled.form`
   width: 500px;
-  height: 600px;
+  height: 440px;
   background-color: #fff;
   padding: 30px 35px;
   margin: 50px 0;
@@ -23,13 +23,6 @@ export const Form = styled.form`
     margin-top: 5px;
     margin-bottom: 10px;
   }
-  button{
-    margin: 0px 10px;
-    width: auto;
-    padding: 8px 18px;
-    margin: 15px 0 0;
-    border-radius: 10px;
-  }
 `;
 
 export const Container = styled.div`
@@ -37,16 +30,3 @@ export const Container = styled.div`
   max-width: 100%;
   margin: 0 auto;
 `;
-
-export const Div = styled.div`
-
-button{
-  width: auto;
-  background-color: white;
-  color: green;
-  padding: 8px 18px;
-  margin: 15px 0 0;
-  border: 2px solid green;
-  border-radius: 10px;
-}
-`

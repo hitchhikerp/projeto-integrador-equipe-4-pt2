@@ -1,7 +1,6 @@
-import Button2 from "../Button2";
 import { Link } from "react-router-dom";
-import { PainelStyled, Info, Div } from "./style";
-import ButtonModal from "../ButtonModal";
+import { PainelStyled, Info } from "./style";
+import Button from "../Button";
 
 function createData(
   cod: number,
@@ -79,14 +78,12 @@ export default function Painel() {
                   <td>{row.status}</td>
                   <td>
                     <Link to="/detalhes">
-                      <Button2 text="ver detalhes" />
+                      <Button basicBlue text="ver detalhes" />
                     </Link>
                   </td>
-                  <Div>
                     <td>
-                      <ButtonModal text="atender solicitação" />
+                      <Button basicGreen working={true} text="atender solicitação" />
                     </td>
-                  </Div>
                 </tr>
               </tbody>
             ))}
