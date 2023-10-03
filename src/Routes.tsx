@@ -16,7 +16,7 @@ export default function Routes() {
             element: <Painel />,
         },
         {
-            path: '/detalhes',
+            path: '/detalhes/:id',
             element: <Detalhes />,
         },
         {

@@ -5,8 +5,8 @@ import Modal from "../Modal";
 interface ButtonProps {
   text?: string;
   basicSize?: boolean;
-  basicGreen?: boolean;
   basicBlue?: boolean;
+  basicGreen?: boolean;
   working?: boolean;
 }
 
@@ -18,6 +18,7 @@ export default function Button({
   working = false,
 }: ButtonProps) {
   const [open, setOpen] = useState<boolean>(false);
+
   return (
     <>
       <ButtonStyled
