@@ -1,41 +1,54 @@
-import Button from "../Button";
+import Button, { ButtonProps } from "../Button";
 import { Form, Container } from "./style";
-import { Link } from "react-router-dom"
-import { useState, FormEventHandler } from "react";
+import { useState, FormEvent } from "react";
+import { useNavigate } from "react-router-dom"; // Use 'useNavigate' em vez de 'useHistory'
+import axios from "axios";
 
 export default function Formulario() {
-  const [codigo, setCodigo] = useState("");
-  const [senha, setSenha] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // para ir para a proxima parte 'painel'
+  const [token, setToken] = useState<string | null>(null); // dando um tupo pro token
 
-  const logar: FormEventHandler<HTMLFormElement> = (evento) => {
-    // evita recarregamento da pagina no envio do formulario
-    evento.preventDefault();
-    // pra ver o que esta
-    console.log(evento);
-    //
-    console.log(codigo);
-    console.log(senha);
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("http://localhost:3000/login", {
+        username,
+        password,
+      });
+
+      const data = response.data;
+      if (data.token) {
+        const newToken: string = data.token;
+        setToken(newToken);
+        localStorage.setItem("token", newToken);
+        navigate("/painel"); 
+      }
+    } catch (error) {
+      console.error("Erro ao fazer login:", error);
+    }
   };
 
   return (
     <>
       <Container>
-        <Form onSubmit={logar}>
-          <label>Código de Acesso</label>
+        <Form onSubmit={handleSubmit}>
+          <label>Nome de Usuário:</label>
           <input
             type="text"
-            value={codigo}
-            onChange={(e) => setCodigo(e.target.value)}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
 
-          <label>Senha</label>
+          <label>Senha:</label>
           <input
             type="password"
-            value={senha}
-            onChange={(e) => setSenha(e.target.value)}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
-
-          <Button />
+          <Button id="id" /> {}
         </Form>
       </Container>
     </>

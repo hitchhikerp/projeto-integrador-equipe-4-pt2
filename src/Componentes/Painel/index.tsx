@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { PainelStyled, Info } from "./style";
+import { PainelStyled, Info, } from "./style"; // Importe o Modal e o ModalContent
 import Button from "../Button";
 import axios from "axios";
 
-interface Order {
-  id: number;
-  nome: string;
-  cpf: string;
-  contato: string;
-  email: string;
-  planos: string;
-  statusPedido: string;
-  horarioPreferencial: string;
+interface OrderManager {
+  codigo_pedido: number;
+  plan: string,
+  id: number,
+  cliente_id: string;
+  nome_completo: string,
+  servico: string;
+  data_efetuar_servico: string;
+  status: string;
   createdAt: Date;
 }
 
 export default function Painel() {
-  const [order, setOrder] = useState<Order[]>([]);
+  const [order, setOrder] = useState<OrderManager[]>([]);
 
   useEffect(() => {
     axios
       .get("http://localhost:3000/orders")
       .then((response) => {
-        const data = response.data as Order[]; // Converter para Order[]
+        const data = response.data as OrderManager[]; // Converter para Order[]
         setOrder(data); // Atribuir o valor convertido
       })
       .catch((error) => {
@@ -34,7 +34,7 @@ export default function Painel() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredOrder = order.filter((order) => {
-    return order.nome.toLowerCase().includes(searchTerm.toLowerCase());
+    return order.nome_completo.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
   return (
@@ -57,19 +57,22 @@ export default function Painel() {
             <tbody key={order.id}>
               <tr>
                 <td>{order.id}</td>
-                <td>{order.nome}</td>
-                <td>{order.planos}</td>
-                <td>
-                  {new Date(order.createdAt).toLocaleDateString()}
-                </td>
-                <td>{order.statusPedido}</td>
+                <td>{order.nome_completo}</td>
+                <td>{order.plan}</td>
+                <td>{new Date(order.createdAt).toLocaleDateString()}</td>
+                <td>{order.status}</td>
                 <td>
                   <Link to={`/detalhes/${order.id}`}>
                     <Button basicBlue text="ver detalhes" />
                   </Link>
                 </td>
                 <td>
-                  <Button basicGreen working={true} text="atender solicitação" />
+                  <Button
+                    basicGreen
+                    working={true}
+                    text="atender solicitação"
+                    id={order.id} // Passe o ID do pedido para o botão
+                  />
                 </td>
               </tr>
             </tbody>

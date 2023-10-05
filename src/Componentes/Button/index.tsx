@@ -8,6 +8,7 @@ interface ButtonProps {
   basicBlue?: boolean;
   basicGreen?: boolean;
   working?: boolean;
+  id: number; // Adicione a prop 'id' aqui
 }
 
 export default function Button({
@@ -16,6 +17,7 @@ export default function Button({
   basicBlue,
   basicGreen,
   working = false,
+  id, // Certifique-se de que 'id' seja recebido como uma prop
 }: ButtonProps) {
   const [open, setOpen] = useState<boolean>(false);
 
@@ -33,8 +35,9 @@ export default function Button({
         <Modal
           isOpen={open}
           setOpen={setOpen}
-          title={"Titulo do Modal"}
+          title={"Atualizar status do pedido"}
           description={"Descrição"}
+          orderId={id} // Passe o id do pedido para o Modal
         />
       )}
     </>

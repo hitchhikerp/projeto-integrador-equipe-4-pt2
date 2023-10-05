@@ -6,16 +6,17 @@ import { Form, Container } from "./style";
 import { FormEventHandler } from "react";
 import { WrapperStyled } from "../Wrapper/style";
 
-interface Order {
-  id: number;
-  nome: string;
-  cpf: string;
-  contato: string;
-  email: string;
-  planos: string;
-  statusPedido: string;
-  horarioPreferencial: string;
-  createdAt: Date;
+interface OrderManager {
+  codigo_pedido: number;
+  id: number,
+  plan: string,
+  cliente_id: string,
+  nome_completo: string,
+  servico: string,
+  data_efetuar_servico: string,
+  status: string,
+  createdAt: Date,
+  time: string,
 }
 
 const logar: FormEventHandler<HTMLFormElement> = (evento) => {
@@ -25,13 +26,13 @@ const logar: FormEventHandler<HTMLFormElement> = (evento) => {
 
 export default function FormDetalhes() {
   const { id } = useParams<{ id: string }>();
-  const [order, setOrder] = useState<Order | null>(null);
+  const [order, setOrder] = useState<OrderManager | null>(null);
 
   useEffect(() => {
     axios
       .get(`http://localhost:3000/orders/${id}`)
       .then((response) => {
-        const data = response.data as Order; 
+        const data = response.data as OrderManager; 
         setOrder(data);
       })
       .catch((error) => {
@@ -45,10 +46,10 @@ export default function FormDetalhes() {
         {order ? (
           <>
             <label>Nome</label>
-            <input type="text" disabled value={order.nome} />
+            <input type="text" disabled value={order.nome_completo} />
 
             <label>Serviço solicitado</label>
-            <input type="text" disabled value={order.planos} />
+            <input type="text" disabled value={order.plan} />
 
             <label>Data da contratação</label>
             <input
@@ -61,11 +62,11 @@ export default function FormDetalhes() {
             <input
               type="text"
               disabled
-              value={order.horarioPreferencial}
+              value={order.time}
             />
 
             <label>Status</label>
-            <input type="text" disabled value={order.statusPedido} />
+            <input type="text" disabled value={order.status} />
           </>
         ) : (
           <p>Carregando detalhes do pedido...</p>
