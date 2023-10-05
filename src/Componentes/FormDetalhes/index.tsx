@@ -31,7 +31,7 @@ export default function FormDetalhes() {
     axios
       .get(`http://localhost:3000/orders/${id}`)
       .then((response) => {
-        const data = response.data as Order; // Supondo que os detalhes do pedido estejam em um único objeto
+        const data = response.data as Order; 
         setOrder(data);
       })
       .catch((error) => {
