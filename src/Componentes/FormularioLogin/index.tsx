@@ -1,14 +1,15 @@
-import Button, { ButtonProps } from "../Button";
-import { Form, Container } from "./style";
-import { useState, FormEvent } from "react";
-import { useNavigate } from "react-router-dom"; // Use 'useNavigate' em vez de 'useHistory'
+import React, { useState, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Button from "../Button";
+import { Form, Container, Error } from "./style"; // Certifique-se de que você tenha um componente Error para exibir mensagens de erro
 
 export default function Formulario() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); // para ir para a proxima parte 'painel'
-  const [token, setToken] = useState<string | null>(null); // dando um tupo pro token
+  const [error, setError] = useState<string | null>(null); // Estado para armazenar mensagens de erro
+  const navigate = useNavigate();
+  const [token, setToken] = useState<string | null>(null);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -18,16 +19,18 @@ export default function Formulario() {
         username,
         password,
       });
-
       const data = response.data;
-      if (data.token) {
+      if (response.status === 200) {
         const newToken: string = data.token;
         setToken(newToken);
         localStorage.setItem("token", newToken);
-        navigate("/painel"); 
+        console.log("Login bem-sucedido!");
+        navigate("/painel");
+      } else {
+        setError("Falha no login. Verifique suas credenciais.");
       }
     } catch (error) {
-      console.error("Erro ao fazer login:", error);
+      setError("Erro ao fazer login, Credenciais invalidas"); 
     }
   };
 
@@ -48,7 +51,11 @@ export default function Formulario() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Button id="id" /> {}
+
+          {error && <Error>{error}</Error>} {}
+
+          <Button id="id" />
+
         </Form>
       </Container>
     </>

@@ -22,3 +22,10 @@ export const Container = styled.div`
   max-width: 100%;
   margin: 0 auto;
 `;
+
+export const Error = styled.p`
+color: red;
+font-size: 14px;
+margin-top: 8px;
+/* Adicione estilos adicionais conforme necessário */
+`;
